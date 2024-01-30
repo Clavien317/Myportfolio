@@ -1,4 +1,4 @@
-import { NextResponse, NextRequest } from "next/server";
+/*import { NextResponse, NextRequest } from "next/server";
 import nodemailer from "nodemailer"
 // import Mailgen from "mailgen";
 
@@ -22,4 +22,4 @@ export async function POST(request: NextRequest) {
       });
 
     return NextResponse.json({  ...body  }, { status: 200 })
-  }
+  }*/
