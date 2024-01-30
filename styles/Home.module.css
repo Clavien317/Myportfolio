@@ -1,0 +1,33 @@
+.main
+{
+  background-color: #092635;
+}
+
+.logo
+{
+  float: left;
+  color: white;
+  margin-top: 0.5vw;
+  margin-left: 5vw;
+  margin-bottom: 2vw;
+}
+
+.nav
+{
+  float: right;
+  margin-right: 10vw;
+  margin-bottom: 2vw;
+}
+
+.nav ul li 
+{
+  display: inline-block;
+  margin-right: 2vw;
+}
+
+.nav ul li a
+{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}

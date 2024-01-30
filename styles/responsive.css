@@ -1,0 +1,246 @@
+
+@media only screen and (max-width: 700px) {
+    .haut
+    {
+        font-size: 15px;
+    }
+
+
+    .haut nav
+    {
+        margin-left: 10vw;
+    }
+
+    .container
+    {
+        width: 100%;
+    }
+    
+
+    .info2
+    {
+        width: 90%;
+        margin-top: 43vw;
+    }
+
+    .info2 h1
+    {
+        font-size: 30px;
+    }
+
+    .info2 h2
+    {
+        font-size: 25px;
+        margin-top: 7vw;
+        font-weight: bold;
+    }
+
+    .info2 h4
+    {
+        font-size: 20px;
+    }
+
+    .profil
+    {
+        width: 70%;
+        height: 4.5vw;
+        padding: 10px;
+    }
+
+    .info1
+    {
+        width: 80%;
+    }
+
+    .apropos
+    {
+        width: 80%;
+        height: 40vw;
+    }
+
+    .apropos p
+    {
+        width: 100%;
+        line-height: 3vw;
+    }
+
+    .topo
+    {
+        margin-top: -54vw;
+    }
+
+    .competence
+    {
+        width: 90%;
+    }
+
+    .tech
+    {
+        width: 45%;
+        height: 36vw;
+        margin-left: 5%;
+    }
+
+    .tech img
+    {
+        width: 60%;
+        height: 20vw;
+    }
+
+    footer
+    {
+        width: 100%;
+    }
+
+    .section
+    {
+        width: 90%;
+    }
+
+    .section .reso
+    {
+        margin-left: 25vw;
+    }
+
+    .section .reso img 
+    {
+        width: 7vw;
+        height: 6vw;
+    }
+
+    .section fieldset
+    {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 20vw;
+    }
+
+    .section form button
+    {
+        width: 50%;
+        height: 6vw;
+        background-color: #064b79;
+        color: white;
+        border: 0;
+        border-radius: 10px;
+    }
+
+    .section form .xd
+    {
+        height: 6vw;
+        width: 40%;
+        margin: 1%;
+    }
+
+    .objet
+    {
+        width: 83%;
+        height: 6vw;
+    }
+
+    .section form textarea
+    {
+        width: 83%;
+        height: 9vw;
+    }
+
+    .blur3
+    {
+    width: 30%;
+    height: 20vw;
+    background-image: linear-gradient(to top, rgb(34, 120, 211) ,rgb(12, 43, 183));
+    flex-shrink: 0; 
+    fill: #B64D20;
+    filter: blur(62px); 
+    float: right;
+    margin-top: -20vw;
+    }
+
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px)
+{
+
+
+    .info2
+    {
+        width: 50%;
+        margin-top: 43vw;
+        float: right;
+        margin-top: 3vw;
+    }
+
+    .info1
+    {
+        width: 40%;
+        float: left;
+    }
+
+    .profil
+    {
+        width: 70%;
+        height: 4vw;
+        padding: 10px;
+    }
+
+    .apropos
+    {
+        width: 55%;
+    }
+
+    .apropos p 
+    {
+        line-height: 3vw;
+    }
+
+    .competence
+    {
+        width: 100%;
+
+    }
+
+    .tech
+    {
+        width: 20%;
+        height: 20vw;
+    }
+
+    footer
+    {
+        width: 100%;
+        margin-bottom: 10vw;
+    }
+
+    .reso
+    {
+        margin-left: 5vw;
+    }
+
+    .xd
+    {
+        width: 45%;
+        height: 4vw;
+    }
+
+    .objet
+    {
+        width: 93%;
+        height: 4vw;
+    }
+
+    .texte
+    {
+        width: 93%;
+    }
+
+    .section form button
+    {
+        height: 4vw;
+        width: 60%;
+        background-color: #064b79;
+        color: white;
+        border: 0;
+        border-radius: 10px;
+    }
+
+}
