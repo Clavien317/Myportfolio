@@ -3,6 +3,7 @@ import style from "@/styles/Home.module.css"
 import Header from "./composants/Header";
 import Contenu from "./composants/Contenu";
 import Footer from "./composants/Footer";
+import Projet from "./composants/Projet";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <br/>
       <Contenu />
       <br/>
+      {/* <Projet /> */}
       <br/>
       <Footer />
       </main>

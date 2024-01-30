@@ -14,22 +14,35 @@ function Footer() {
         setInput(values=>({...values,[name]:value}))
     }
 
-    const submit =async(e)=>
-    {
-        e.preventDefault()
-        // await axios.post("/api",input).then(function(response)
-        // {
-        //   if(response)
-        //   {
-        //     console.log("Tout va bien");
-        //   }else
-        //   {
-        //     alert("Erreur d'envoi ...")
-        //   }
-    
-        // });
+    const submit = async (e) => {
+        e.preventDefault();
+      
+        try {
+          const response = await fetch("/api/send", 
+          {
+            method:"POST",
+            body:JSON.stringify({
+                input
+            })
+            
+          })
+      
+          if (response.status === 200) {
+            console.log("Tout va bien");
+          } else {
+            console.error("Error:", response.statusText);
+            alert("Erreur d'envoi ...");
+          }
+        } catch (error) {
+          console.error("Error:", error.message);
+          alert("Erreur d'envoi ...");
+        }
+      
         console.log(input);
-    }
+      };
+      
+
+
   return (
     <div>
         <div className="blur3"></div>
