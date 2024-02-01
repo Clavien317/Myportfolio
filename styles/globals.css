@@ -1,6 +1,6 @@
 body
 {
-  background-color: #112031;
+  background-color: #092635;
   margin: 0;
   padding: 0;
 }
@@ -78,7 +78,7 @@ body
 
 .profil
 {
-  width: 60%;
+  width: 50%;
   height: 3vw;
   border: 1px solid white;
   background-color: #1E1E1E;
@@ -143,6 +143,7 @@ body
   float: right;
   margin-top: -22vw;
   margin-right: 5vw;
+
 }
 
 

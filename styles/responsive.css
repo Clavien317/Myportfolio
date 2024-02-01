@@ -3,8 +3,8 @@
     .haut
     {
         font-size: 15px;
+        margin-bottom: 10vw;
     }
-
 
     .haut nav
     {
@@ -15,12 +15,11 @@
     {
         width: 100%;
     }
-    
 
     .info2
     {
         width: 90%;
-        margin-top: 43vw;
+        margin-top: 50vw;
     }
 
     .info2 h1
@@ -43,7 +42,7 @@
     .profil
     {
         width: 70%;
-        height: 4vw;
+        height: 4.5vw;
         padding: 10px;
     }
 
@@ -56,13 +55,12 @@
     {
         width: 80%;
         height: 40vw;
-        margin-bottom: 10vw;
     }
 
     .apropos p
     {
         width: 100%;
-        line-height: 4vw;
+        line-height: 3vw;
     }
 
     .topo
@@ -78,7 +76,7 @@
     .tech
     {
         width: 45%;
-        height: 40vw;
+        height: 36vw;
         margin-left: 5%;
     }
 
@@ -86,7 +84,6 @@
     {
         width: 60%;
         height: 20vw;
-        margin-bottom: 5vw;
     }
 
     footer
@@ -180,8 +177,8 @@
 
     .profil
     {
-        width: 80%;
-        height: 3vw;
+        width: 70%;
+        height: 4vw;
         padding: 10px;
     }
 
@@ -204,7 +201,7 @@
     .tech
     {
         width: 20%;
-        height: 22vw;
+        height: 20vw;
     }
 
     footer
@@ -247,17 +244,12 @@
 
 }
 
-
 @media only screen and (max-width: 430px)
 {
-    .info2
-    {
-        width: 90%;
-        margin-top: 43vw;
-    }
+
     .profil
     {
-        width: 94%;
+        width: 90%;
     }
 
     .apropos p
@@ -265,9 +257,37 @@
         line-height: 5vw;
     }
 
+    #logo
+    {
+        float: left;
+        margin-left: -25vw;
+    }
+
+    .hamburger
+    {
+        float: right;
+        margin-right: -20vw;
+    }
+
+    .haut
+    {
+        margin-top: -3vw;
+    }
+
+    .info1
+    {
+        margin-top: 20vw;
+    }
+
+
     .apropos
     {
         margin-bottom: 40vw;
+    }
+
+    .apropos p
+    {
+        line-height: 5vw;
     }
 
     .tech

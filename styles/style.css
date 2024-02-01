@@ -13,7 +13,7 @@
 .tech
 {
     width: 18%;
-    height: 18vw;
+    height: 16vw;
     background-color: #064b79;
     display: inline-block;
     margin-left: 1%;
@@ -27,12 +27,12 @@
 .tech:hover
 {
     box-shadow: 0 2px 5px 0 white, 0 3px 2px 0 rgb(86, 85, 85);
-
+    color: white;
 }
 
 .tech img
 {
-    width: 60%;
+    width: 65%;
     height: 10vw;
 }
 
@@ -53,8 +53,6 @@ footer
     text-align: center;
     display: inline-block;
     color: white;
-    
-    margin-bottom: 10vw;
 }
 
 .section ul li

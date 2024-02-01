@@ -1,15 +1,32 @@
 import style from "@/styles/Home.module.css"
-// import {TypeWriter} from "react-typewriter-effect"
+import { useEffect, useState } from "react"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+// import Test from "./Test";
+
+
 
 
 
 function Header() {
+
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, 
+      easing: 'ease-in-out',
+    });
+
+  }, []);
+
+
   return (
     <>
       <div className="haut">
-        <h1 className={style.logo}>Clavien N.</h1>
+        <header>
+        <h1 className={style.logo} id="logo" data-aos="flip-up">Clavien N.</h1>
         <input type="checkbox" id="nav_check" hidden />
-        <nav className={style.nav} id='navig'>
+        <nav className={style.nav} id='navig' data-aos="flip-down">
           <ul className="nav__links">
             <li className="link"><a href=''>Accueil</a></li>
             <li className="link"><a href='#competence'>Compètence</a></li>
@@ -24,35 +41,25 @@ function Header() {
           <div></div>
         </label>
         <br />
+        </header>
       </div>
 
       <div className="container">
-        <div className="info1">
+        <div className="info1"  data-aos="zoom-in">
           <img src='/Group 10.png' alt='' />
         </div>
 
-        <div className="info2">
+        <div className="info2"  data-aos="slide-left">
           <h1>Salut, Je suis </h1>
           <h2 className="nom">NAMBININA Clavien</h2>
           <h4>Développeur fullstack</h4>
-          <div className="profil">
+          <div className="profil"  data-aos="zoom-in">
             <br />
-            Développeur MERN ... MEVN ... Laravel
-            {/* <TypeWriter
-                  startDelay={2000}
-                  cursorColor="#3F3D56"
-                  multiText={[
-                    'Développeur MERN',
-                    'Développeur MERN',
-                    'Développeur Laravel',
-                  ]}
-                  multiTextDelay={1000}
-                  typeSpeed={30}
-                /> */}
+            Développeur MERN/MEVN ... Laravel
           </div>
           <div className="blur"></div>
         </div>
-
+        
       </div>
     </>
   )

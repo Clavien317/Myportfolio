@@ -1,8 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Footer() {
 
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, 
+        easing: 'ease-in-out',
+      });
+    }, []);
+    
 
     const [input,setInput] = useState([])
 
@@ -14,43 +23,30 @@ function Footer() {
         setInput(values=>({...values,[name]:value}))
     }
 
-    const submit = async (e) => {
-        e.preventDefault();
-      
-        try {
-          const response = await fetch("/api/send", 
+    const submit =async(e)=>
+    {
+        e.preventDefault()
+        await axios.post("/api/route",{nom:input.nom,email:input.email,objet:input.objet,message:input.message}).then(function(response)
+        {
+          if(response)
           {
-            method:"POST",
-            body:JSON.stringify({
-                input
-            })
-            
-          })
-      
-          if (response.status === 200) {
-            console.log("Tout va bien");
-          } else {
-            console.error("Error:", response.statusText);
-            alert("Erreur d'envoi ...");
+            alert("Envoyé avec success !");
+          }else
+          {
+            alert("Erreur d'envoi ...")
           }
-        } catch (error) {
-          console.error("Error:", error.message);
-          alert("Erreur d'envoi ...");
-        }
-      
-        console.log(input);
-      };
-      
-
-
+    
+        });
+        console.log(input.nom);
+    }
   return (
     <div>
         <div className="blur3"></div>
 
         <footer id="contact">
             <div className="section">
-                <h1>Information</h1>
-                <ul className="reso">
+                <h1 data-aos="zoom-in">Information</h1>
+                <ul className="reso" data-aos="zoom-out">
                     <li> <img src='/gmail_logo_480px.png' alt=''/><p>Claviennambinina511@gmail.com</p></li>
                     <li><img src='/linkedin_480px.png' alt=''/><p>Clavien NAMBININA</p></li>
                     <li><img src='/whatsapp_480px.png' alt=''/><p>+261349856513</p></li>
@@ -60,9 +56,9 @@ function Footer() {
 
             <div className="section">
                 <fieldset> 
-                    <legend> Contactez-moi !</legend>
+                    <legend data-aos="zoom-in"> Contactez-moi !</legend>
                     <br/>
-                    <form onSubmit={submit}> 
+                    <form onSubmit={submit} data-aos="zoom-in"> 
                     <input type='text' placeholder="Nom" className="xd" name="nom" onChange={change} />
                     <input type='email' placeholder="Email" className="xd" name="email" onChange={change} />
                     <br/>
