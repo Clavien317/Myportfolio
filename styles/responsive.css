@@ -260,13 +260,13 @@
     #logo
     {
         float: left;
-        margin-left: -25vw;
+        margin-left: 0vw;
     }
 
     .hamburger
     {
         float: right;
-        margin-right: -20vw;
+        margin-right: 0vw;
     }
 
     .haut
