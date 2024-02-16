@@ -2,6 +2,8 @@ import style from "@/styles/Home.module.css"
 import { useEffect, useState } from "react"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Typewriter from 'typewriter-effect';
+
 // import Test from "./Test";
 
 
@@ -55,7 +57,13 @@ function Header() {
           <h4>Développeur fullstack</h4>
           <div className="profil"  data-aos="zoom-in">
             <br />
-            Développeur MERN/MEVN ... Laravel
+            <Typewriter
+              options={{
+                strings: ['Développeur MERN', 'Développeur MEVN','Développeur Laravel'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </div>
           <div className="blur"></div>
         </div>
