@@ -4,8 +4,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typewriter from 'typewriter-effect';
 
-// import Test from "./Test";
-
 
 
 
