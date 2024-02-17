@@ -18,6 +18,6 @@
     "react-dom": "^18",
     "react-typewriter-effect": "^1.1.0",
     "typewriter": "^9.1.0",
-    "typewriter-effect":"^2.21.0",
+    "typewriter-effect":"^2"
   }
 }
