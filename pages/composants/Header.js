@@ -2,21 +2,16 @@ import style from "@/styles/Home.module.css"
 import { useEffect, useState } from "react"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Typewriter from 'typewriter-effect';
-
-
+import Typewriter from 'typewriter-effect'
 
 
 
 function Header() {
-
-
   useEffect(() => {
     AOS.init({
       duration: 2000, 
       easing: 'ease-in-out',
     });
-
   }, []);
 
 
