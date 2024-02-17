@@ -50,9 +50,10 @@ function Header() {
           <h4>Développeur fullstack</h4>
           <div className="profil"  data-aos="zoom-in">
             <br />
+    Développeur
             <Typewriter
               options={{
-                strings: ['Développeur MERN', 'Développeur MEVN','Développeur Laravel'],
+                strings: [' MERN', ' MEVN',' Laravel'],
                 autoStart: true,
                 loop: true,
               }}
