@@ -13,31 +13,27 @@ function Footer() {
     }, []);
     
 
-    const [input,setInput] = useState([])
+    const [input, setInput] = useState({ nom: '', email: '', objet: '' });
 
     const change=(e)=>
     {
-        const name = e.target.name;
-        const value = e.target.value
-
-        setInput(values=>({...values,[name]:value}))
+        const { name, value } = e.target;
+        setInput(prevInput => ({ ...prevInput, [name]: value }));
     }
 
     const submit =async(e)=>
     {
-        e.preventDefault()
-        await axios.post("/api/route",{nom:input.nom,email:input.email,objet:input.objet,message:input.message}).then(function(response)
-        {
-          if(response)
-          {
-            alert("Envoyé avec success !");
-          }else
-          {
-            alert("Erreur d'envoi ...")
-          }
-    
-        });
-        console.log(input.nom);
+        e.preventDefault();
+        try {
+            const response = await axios.post("/api/route", input);
+            if (response) {
+                console.log("Envoyé avec succès !");
+            } else {
+                console.log("Erreur d'envoi ...");
+            }
+        } catch (error) {
+            console.error("Erreur lors de l'envoi:", error);
+        }
     }
   return (
     <div>
