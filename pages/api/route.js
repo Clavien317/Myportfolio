@@ -1,29 +1,27 @@
-import { json, send } from 'micro';
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 export default async function(req, res) {
-  try {
-    const body = await json(req);
-    const { email, nom, objet } = body; // Ajout de `test` ici
+    try {
+        const { nom, email, objet } = req.body;
 
-    let transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'claviennambinina511@gmail.com',
-        pass: 'jcua kqwt nnbj uoay', // Assurez-vous de remplacer par votre mot de passe
-      },
-    });
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'Claviennambinina511@gmail.com',
+                pass: 'qlgt zujv iscc ohcd'
+            }
+        });
 
-    await transporter.sendMail({
-      from: 'claviennambinina511@gmail.com',
-      to: `${email}`,
-      subject: `Bonjour ${nom}`,
-      text: `J'ai reçu votre email et je vous répondrai dans les plus brefs délais. Contenu du test : ${objet}`,
-    });
+        const info = await transporter.sendMail({
+            from: 'Claviennambinina511@gmail.com', // Adresse de l'expéditeur
+            to: email, // Adresse du destinataire
+            subject: `Bonjour ${nom}`, // Sujet du message
+            text: `J'ai reçu votre email et je vous répondrai dans les plus brefs délais ${objet}` // Corps du message en texte brut
+        });
 
-    return send(res, 200, 'Successful');
-  } catch (error) {
-    console.error('Error in email sending API:', error);
-    return send(res, 500, 'Internal Server Error');
-  }
+        return res.status(200).json({ message: "Email envoyé avec succès !" });
+    } catch (error) {
+        console.error('Erreur dans l\'API d\'envoi d\'email :', error);
+        return res.status(500).json({ error: "Erreur lors de l'envoi de l'email" });
+    }
 }
