@@ -27,9 +27,9 @@ function Footer() {
         try {
             const response = await axios.post("/api/route", input);
             if (response) {
-                console.log("Envoyé avec succès !");
+                alert("Envoyé avec succès !");
             } else {
-                console.log("Erreur d'envoi ...");
+                alert("Erreur d'envoi ...");
             }
         } catch (error) {
             console.error("Erreur lors de l'envoi:", error);
