@@ -13,7 +13,7 @@ function Footer() {
     }, []);
     
 
-    const [input, setInput] = useState({ nom: '', email: '', objet: '' });
+    const [input, setInput] = useState({ nom: '', email: '', objet: '',message:'' });
 
     const change=(e)=>
     {
