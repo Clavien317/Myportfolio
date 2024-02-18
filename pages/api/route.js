@@ -15,16 +15,10 @@ export default async function(req, res) {
         const info = await transporter.sendMail({
             from: 'Claviennambinina511@gmail.com',
             to: email,
-            subject: `Bonjour ${nom}`,
-            text: `J'ai reçu votre email et je vous répondrai dans les plus brefs délais ${objet}`
+            subject: `Bonjour ${nom}, vous souhaitez parler de ${objet}`,
+            text: `J'ai bien reçu votre email contenant le message "${message}" et je vous répondrai dans les plus brefs délais.`
         });
 
-        const info2 = await transporter.sendMail({
-            from: 'Claviennambinina511@gmail.com',
-            to: 'claviennambinina@gmail.com',
-            subject: `${objet}`,
-            text: `Il y a de qlq qui a d'email ${email} , il s'appelle  ${nom} viens de vous envoyez de message ${message}`
-        });
 
         return res.status(200).json({ message: "Email envoyé avec succès !" });
     } catch (error) {
