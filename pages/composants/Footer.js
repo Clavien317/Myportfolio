@@ -62,6 +62,8 @@ function Footer() {
                     <input type='text' placeholder="Objet" className="objet"  name="objet" onChange={change} />
                     <br/>
                     <br/>
+                    <label>Laissez un message</label>
+                    <br/>
                     <textarea className="texte" placeholder="Description" name="message" onChange={change}> </textarea>
                     <br/>
                     <br/>
