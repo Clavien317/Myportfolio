@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Swal from 'sweetalert2'
+import { useRouter } from "next/router";
+import { useRef } from "react";
 
 function Footer() {
 
+    const router = useRouter()
     useEffect(() => {
       AOS.init({
         duration: 1000, 
@@ -13,7 +17,17 @@ function Footer() {
     }, []);
     
 
+    function valid() {
+        Swal.fire({
+          title: 'Succès !',
+          text: 'Votre email est envoyée avec succès !',
+          icon: 'success',
+        });
+      }
+
     const [input, setInput] = useState({ nom: '', email: '', objet: '',message:'' });
+    const formref = useRef(null)
+    const [chargement, setChargement] = useState(false);
 
     const change=(e)=>
     {
@@ -24,16 +38,44 @@ function Footer() {
     const submit =async(e)=>
     {
         e.preventDefault();
+        setChargement(true);
+        const loadingAlert = Swal.fire({
+            icon:"info",
+            title: 'Envoi en cours...',
+            showConfirmButton: false,
+            // allowOutsideClick: false,
+            onBeforeOpen: () => {
+              Swal.showLoading();
+            }
+          });
         try {
             const response = await axios.post("/api/route", input);
             if (response) {
-                alert("Envoyé avec succès !");
+                formref.current.reset()
+
+                  await new Promise(resolve => setTimeout(resolve, 3000));
+                  loadingAlert.close();
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Email envoyé avec succès!',
+                    showConfirmButton: false,
+                    timer: 2000
+                  });
             } else {
-                alert("Erreur d'envoi ...");
+                Swal.fire({
+                    title: 'Erreur !',
+                    text: 'Email non envoyer  !',
+                    icon: 'error',
+                  });
             }
-        } catch (error) {
-            console.error("Erreur lors de l'envoi:", error);
-        }
+
+
+      
+          } catch (error) {
+            console.error('Erreur lors de l\'envoi de l\'email:', error);
+            setChargement(false);
+          }
+        
     }
   return (
     <div>
@@ -54,7 +96,7 @@ function Footer() {
                 <fieldset> 
                     <legend data-aos="zoom-in"> Contactez-moi !</legend>
                     <br/>
-                    <form onSubmit={submit} data-aos="zoom-in"> 
+                    <form onSubmit={submit} data-aos="zoom-in" ref={formref}> 
                     <input type='text' placeholder="Nom" className="xd" name="nom" onChange={change} />
                     <input type='email' placeholder="Email" className="xd" name="email" onChange={change} />
                     <br/>

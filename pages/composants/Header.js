@@ -53,7 +53,7 @@ function Header() {
     
             <Typewriter
               options={{
-                strings: ['Développeur MERN', 'Développeur MEVN','Développeur Laravel'],
+                strings: ['Développeur MERN', 'Développeur MEVN','Développeur Laravel', 'Développeur WEB'],
                 autoStart: true,
                 loop: true,
               }}
