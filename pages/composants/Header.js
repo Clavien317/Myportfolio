@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typewriter from 'typewriter-effect'
+import { motion } from "framer-motion";
 
 
 
@@ -40,11 +41,37 @@ function Header() {
       </div>
 
       <div className="container">
-        <div className="info1"  data-aos="zoom-in">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 50,
+            }}
+            whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 1,
+                delay: 0.6,
+            },
+            }}
+        className="info1">
           <img src='/Group 10.png' alt='' />
-        </div>
+        </motion.div>
 
-        <div className="info2"  data-aos="slide-left">
+        <motion.div 
+          initial={{
+            opacity: 0,
+            y: 70,
+            }}
+            whileInView={{
+            opacity: 1,
+            y: 90,
+            transition: {
+                duration: 2,
+                delay: 0.6,
+            },
+            }}
+        className="info2">
           <h1>Salut, Je suis </h1>
           <h2 className="nom">NAMBININA Clavien</h2>
           <h4>Développeur fullstack</h4>
@@ -60,7 +87,7 @@ function Header() {
             />
           </div>
           <div className="blur"></div>
-        </div>
+        </motion.div>
         
       </div>
     </>
