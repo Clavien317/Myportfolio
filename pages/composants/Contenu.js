@@ -147,10 +147,14 @@ function Contenu() {
                 En général, j'utilise les technologies JavaScript et PHP pour le développement web, ainsi que C# pour la création de logiciels de bureau.
                 J'ai également des notions en Python (avec Flask) et en R. Je suis avide d'acquérir de nouvelles compétences.
             </motion.p>
+             <br/>
+             <br/>
         </div>
         <img src='/Looper-1.png' alt='' className="topo" data-aos="zoom-out"/>
         <br/>
         <div className="blur2"></div>
+        <br/>
+        <br/>
         <br/>
         <div className="competence" id="competence">
             <h1 data-aos="zoom-in">Compètences</h1>
