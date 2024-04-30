@@ -141,11 +141,12 @@ function Contenu() {
                 },
                 }}
             >
-            Actuellement, je suis étudiant à l'École Nationale d'Informatique (ENI) de l'Université de Fianarantsoa.
-             Ma passion réside dans le développement web et logiciel de bureau. En général, 
-             j'utilise les technologies JavaScript et PHP pour le développement web,
-              ainsi que C# pour la création de logiciels de bureau. J'ai également des notions en Python (Flask) et en R.
-               Je suis avide d'acquérir de nouvelles compétences.
+            Actuellement à la recherche d'opportunités dans le domaine de l'informatique,
+            j'ai suivi une formation professionnelle à l'ENI (École Nationale d'informatique) de l'Université de Fianarantsoa.
+            Ma passion réside dans le développement web et logiciel de bureau.
+            En général, j'utilise les technologies JavaScript et PHP pour le développement web,
+            ainsi que C# pour la création de logiciels de bureau.
+            J'ai également des notions en Python (Flask) et en R. Je suis avide d'acquérir de nouvelles compétences.
             </motion.p>
         </div>
         <img src='/Looper-1.png' alt='' className="topo" data-aos="zoom-out"/>
