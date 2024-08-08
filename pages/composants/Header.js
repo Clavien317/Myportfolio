@@ -26,7 +26,7 @@ function Header() {
           <ul className="nav__links">
             <li className="link"><a href='/'>Accueil</a></li>
             <li className="link"><a href='#competence'>Compètence</a></li>
-            <li className="link"><a href='/' onClick={()=>alert("En cours ...")}>Projet</a></li>
+            <li className="link"><a href='/' onClick={()=>alert("En cours de développement ...")}>Projet</a></li>
             <li className="link"><a href='#apropos'>Apropos</a></li>
             <li className="link"><a href='#contact'>Contact</a></li>
           </ul>
