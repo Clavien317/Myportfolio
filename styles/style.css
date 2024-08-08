@@ -13,7 +13,7 @@
 .tech
 {
     width: 18%;
-    height: 16vw;
+    height: 18vw;
     background-color: #064b79;
     display: inline-block;
     margin-left: 1%;
@@ -32,8 +32,8 @@
 
 .tech img
 {
-    width: 65%;
-    height: 10vw;
+    width: 70%;
+    height: 12vw;
 }
 
 .node
